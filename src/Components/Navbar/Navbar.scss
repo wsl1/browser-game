@@ -1,0 +1,15 @@
+@import '../../scss/colors';
+
+.nav {
+    list-style-type: none;
+    display: flex;
+    background-color: $main-color;
+
+    &-item { 
+        padding-right: 20px;
+        &__link {
+            color: $main-color1;
+            text-decoration: none;
+        }
+    }
+}
