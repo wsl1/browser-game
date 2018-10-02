@@ -1,0 +1,6 @@
+@import './scss/colors';
+.app {
+    &__content {
+        padding: $indent; 
+    }
+}
