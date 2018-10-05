@@ -1,0 +1,19 @@
+@import '../../scss/colors';
+
+.shop-card {
+    border: 1px solid black;
+    background: $main-color1;
+    color: white;
+    &__name {
+        text-align: center;
+    }
+
+    &__price {
+        text-align: center;
+    }
+
+    &__purchase {
+        width: 100%;
+        background: white;
+    }
+}
