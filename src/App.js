@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.scss';
-import Navbar from './Components/Navbar/Navbar';
+import TopBar from './Components/TopBar/TopBar';
 import { BrowserRouter, Route, Switch} from 'react-router-dom';
 import Farm from './Components/Farm/Farm';
 import Shop from './Components/Shop/Shop';
@@ -11,7 +11,7 @@ class App extends Component {
       <div className="app">
         <BrowserRouter>
           <div>
-            <Navbar />
+            <TopBar />
             <div className="app__content">
               <Switch>
                 <Route path="/farm" component={Farm}/>
