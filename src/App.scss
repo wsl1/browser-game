@@ -1,7 +1,8 @@
 @import './scss/colors';
 .app {
     &__content {
-        padding: $indent;
+        padding: 0 $indent;
         margin-top: 30px;
+        position: relative;
     }
 }
