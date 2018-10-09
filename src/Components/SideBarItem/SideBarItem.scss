@@ -1,0 +1,13 @@
+.side-bar-item {
+    text-align: center;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    background: #3b1212;
+    &__link {
+        color: white;
+        text-decoration: none;
+        width: 100%;
+    }
+    
+}
