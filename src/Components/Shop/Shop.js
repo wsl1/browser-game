@@ -1,46 +1,24 @@
 import React, { Component } from 'react';
-import './Shop.scss';
-import {connect} from 'react-redux';
-import ShopCard from '../ShopCard/ShopCard';
-import Items from './Items.json';
-import {buyCow, buyChicken} from '../../Actions/FarmActions';
+import ShopBuy from '../ShopBuy/ShopBuy';
+import ShopSell from '../ShopSell/ShopSell';
+import SideBar from '../SideBar/SideBar';
+import SideBarItem from '../SideBarItem/SideBarItem';
+import {Route} from 'react-router-dom';
 
 class Shop extends Component {
   
   render() {
-    const shopCards = Items.map((shopCard) => {
-      let purchase;
-      switch(shopCard.name) {
-        case 'Cow':
-          purchase = this.props.buyCow;
-          break;
-        case 'Chicken':
-          purchase = this.props.buyChicken
-      }
-      return (
-        <ShopCard
-          name={shopCard.name}
-          price={shopCard.price}
-          purchase={purchase}
-        />
-      );
-    });
-
     return (
        <div className="shop">
-          {shopCards}
+          <SideBar>
+            <SideBarItem text="Buy" link="/shop/buy" />
+            <SideBarItem text="Sell" link="/shop/sell"/>
+          </SideBar>
+          <Route exact path="/shop/buy" component={ShopBuy}/>
+          <Route exact path="/shop/sell" component={ShopSell}/>
        </div>
     );
   }
 }
 
-const mapDispatchToProps = (dispatch) => ({
-  buyCow: () => {
-    dispatch(buyCow())
-  },
-  buyChicken: () => {
-    dispatch(buyChicken())
-  }
-});
-
-export default connect(null, mapDispatchToProps)(Shop);
+export default Shop;
