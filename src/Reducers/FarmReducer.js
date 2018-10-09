@@ -6,14 +6,14 @@ export default (state = {
 action) => {
     if(state.balance - action.payload < 0) return state;
     switch(action.type) {
-        case 'BUY_COW':
+        case 'BUY_COWS':
             state = {
                 ...state,
                 cows: ++state.cows,
                 balance: state.balance - action.payload
             }
             break;
-        case 'BUY_CHICKEN':
+        case 'BUY_CHICKENS':
             state = {
                 ...state,
                 chickens: ++state.chickens,
