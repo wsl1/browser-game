@@ -21,7 +21,7 @@ export default (
                 state = {
                     ...state,
                     animals,
-                    updatedBalance
+                    balance: updatedBalance
                 };
                 break;
             case 'BUY_CHICKENS':
@@ -31,17 +31,27 @@ export default (
                 state = {
                     ...state,
                     animals,
-                    updatedBalance
+                    balance: updatedBalance
                 };
                 break;
             case 'SELL_COWS':
                 if(state.animals.cows - quantity < 0) return state;
-                animals.cows = animals.chickens - quantity;
+                animals.cows = animals.cows - quantity;
                 updatedBalance = balance + (price * quantity);
                 state = {
                     ...state,
                     animals,
-                    updatedBalance
+                    balance: updatedBalance
+                };
+                break;
+            case 'SELL_CHICKENS':
+                if(state.animals.chickens - quantity < 0) return state;
+                animals.chickens = animals.chickens - quantity;
+                updatedBalance = balance + (price * quantity);
+                state = {
+                    ...state,
+                    animals,
+                    balance: updatedBalance
                 };
                 break;
         }
