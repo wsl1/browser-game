@@ -1,19 +1,31 @@
 export const buyCows = (quantity) => ({
     type: "BUY_COWS",
-    payload: quantity * 1500
+    payload: {
+        price: 1500,
+        quantity
+    }
 });
 
 export const buyChickens = (quantity) => ({
     type: "BUY_CHICKENS",
-    payload: quantity * 20
+    payload: {
+        price: 20,
+        quantity
+    }
 });
 
 export const sellCows = (quantity) => ({
     type: "SELL_COWS",
-    payload: quantity * 1500
+    payload: {
+        price: 1500,
+        quantity
+    }
 });
 
 export const sellChickens = (quantity) => ({
     type: "SELL_CHICKENS",
-    payload: quantity * 20
+    payload: {
+        price: 20,
+        quantity
+    }
 });
