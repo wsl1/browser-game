@@ -1,7 +1,9 @@
+import Prices from '../data/Prices.json';
+
 export const buyCows = (quantity) => ({
     type: "BUY_COWS",
     payload: {
-        price: 1500,
+        price: Prices.cow.buyPrice,
         quantity
     }
 });
@@ -9,7 +11,7 @@ export const buyCows = (quantity) => ({
 export const buyChickens = (quantity) => ({
     type: "BUY_CHICKENS",
     payload: {
-        price: 20,
+        price: Prices.chicken.buyPrice,
         quantity
     }
 });
@@ -17,7 +19,7 @@ export const buyChickens = (quantity) => ({
 export const sellCows = (quantity) => ({
     type: "SELL_COWS",
     payload: {
-        price: 1500,
+        price: Prices.cow.sellPrice,
         quantity
     }
 });
@@ -25,7 +27,7 @@ export const sellCows = (quantity) => ({
 export const sellChickens = (quantity) => ({
     type: "SELL_CHICKENS",
     payload: {
-        price: 20,
+        price: Prices.chicken.sellPrice,
         quantity
     }
 });
