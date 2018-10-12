@@ -11,8 +11,17 @@
     &__price {
         text-align: center;
     }
+    
+    &__quantity {
+        display: inline-block;
+    }
 
-    &__purchase {
+    &__buttons {
+        display: inline-flex;
+        flex-direction: column;
+    }
+
+    &__submit {
         width: 100%;
         background: white;
     }
