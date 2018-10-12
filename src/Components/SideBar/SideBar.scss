@@ -1,0 +1,11 @@
+@import '../../scss/colors';
+
+
+.side-bar {
+    position: absolute;
+    left:0;
+    top: 0;
+    height: 80vh;
+    width: $indent;
+    background: $main-color1;
+}
