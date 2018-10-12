@@ -1,0 +1,25 @@
+.farm-stats {
+    
+    &__stat {
+        border: 1px solid black;
+        display: inline-block;
+    }
+
+    &__number {
+        text-align: center;
+    }
+
+    
+}
+
+.cow {
+    width: 30px;
+}
+
+.chicken {
+    width: 30px;
+}
+
+.milk {
+    width: 30px;
+}
