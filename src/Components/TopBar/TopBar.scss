@@ -1,7 +1,7 @@
 @import '../../scss/colors';
 
 .top-bar {
-    padding: $indent;
+    padding: 0 $indent;
     background-color: $main-color;
     display: flex;
     justify-content: space-between;
