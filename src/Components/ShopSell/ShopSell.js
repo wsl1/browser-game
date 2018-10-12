@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './ShopSell.scss';
 import Proptypes from 'proptypes';
 import {connect} from 'react-redux';
 import { sellCows, sellChickens} from '../../Actions/FarmActions';
