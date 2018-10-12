@@ -1,0 +1,10 @@
+{ 
+    "cow": {
+        "buyPrice": "1500",
+        "sellPrice": "1400"
+    },
+    "chicken": {
+        "buyPrice": "20",
+        "sellPrice": "15"        
+    } 
+}
